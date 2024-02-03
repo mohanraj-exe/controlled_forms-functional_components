@@ -10,13 +10,13 @@ body {
 
 header{
   background-color: #136C72;
+  margin-bottom: 1em;
 }
 
 .container {
   width: 80%;
   max-width: 1100px;
   margin: 0 auto;
-  display: flex;
   /* border: 2px solid limegreen; */
 }
 
@@ -28,9 +28,7 @@ header{
   padding: 0.75em 0;
 }
 
-.main {
-  width: 80%;
-  margin-top: 1em;
+.row {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -53,36 +51,29 @@ tr,td{
   border: ridge;
 } 
 
-.table{
-  /* width: 100%; */
-  /* max-width: 100%; */
+.table_section{
   align-self: flex-start;
-  /* max-width: 100%; */
-  /* margin-right: 0; */
-  /* padding: 0.15em; */
-
+  /* border: 2px solid red; */
 }
 
-/* .table__contents{
-  display: flex;
-  flex-direction: row;
-} */
+.table__content--head--body{
+  max-width: 100%;
+}
 
-.form{
+.form_section{
   width: 35%;
-  /* padding: 1em; */
-  /* border: 2px solid pink; */
+  /* border: 2px solid red; */
   border: ridge;
   padding: 0.15em ;
   /* max-width: 100%; */
-  /* display: flex; */
   align-self: flex-start;
+}
+
+.form__content{
+  max-width: 100%;
 }
 
 .row{
-  border: ridge;
-  padding: 0.15em ;
-  /* margin-bottom: 0.2em; */
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -107,4 +98,17 @@ tr,td{
   text-decoration: none;
   border-style: none;
   text-transform: uppercase;
+}
+
+
+/* Media queries */
+
+@media (max-width: 600px) {
+  .container{
+    display: block;
+    /* background-color: crimson; */
+  }
+  .table_section, .form_section{
+    width: 100%;
+  }
 }

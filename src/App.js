@@ -201,87 +201,88 @@ function App() {
   return (
     <>
       <header>
-        <div className='container'>
+        <div className='container row'>
           <a className="app_title" href="/">Controlled-Forms-Functional components </a>
         </div>
       </header>
 
-      <main className='container main'>
+      <main className='container row'>
+        <section className='table_section'>
+          <table>
+            <thead>
+              <tr>
+                {table_head}
+              </tr>
+            </thead>
+            <tbody>
+              {table_body}
+            </tbody>
+          </table>
+        </section>
 
-        <table className='table'>
-          <thead>
-            <tr>
-              {table_head}
-            </tr>
-          </thead>
-          <tbody>
-            {table_body}
-          </tbody>
-        </table>
-
-        {/* <Table props={{data}}/> */}
-
-        <form className='form' onSubmit={(e) => formSubmit(e)}>
-          <div className="row">
-            <label>First name:</label>
-            <input type="text" name="firstName" value={firstName} onChange={handleChange} />
-          </div>
-          <div style={{ color: 'red' }}>{errors.firstName}</div>
-
-          <div className="row">
-            <label>Last name:</label>
-            <input type="text" name="lastName"
-              value={lastName}
-              onChange={handleChange} />
-          </div>
-          <div style={{ color: 'red' }}>{errors.lastName}</div>
-
-          <div className="row">
-            <label>Email:</label>
-            <input type="email" name="email"
-              value={email}
-              onChange={handleChange} />
-          </div>
-          <div style={{ color: 'red' }}>{errors.email}</div>
-
-          <div className="row">
-            <span>Gender:</span>
-            <span className="form__input--name">
-              <input
-                type="radio"
-                name="gender"
-                value="male"
-                checked={gender === "male"}
-                onChange={handleChange}>
-              </input>
-              <label>Male</label> &nbsp;
-
-              <input type="radio" name="gender" value="female" checked={gender === "female"} onChange={handleChange} />
-              <label>Female</label>
-            </span>
-          </div>
-          {/* <div style={{ color: 'red' }}>{errors.gender}</div> */}
-
-          <div className="row">
-            <label>Courses:</label>
-            <select name="course" className="btn--class"
-              value={course}
-              onChange={(e) => setCourse(e.target.value)}>
-              <option value="reactjs">ReactJs</option>
-              <option value="nodejs">NodeJs</option>
-              <option value="mongodb">MongoDB</option>
-            </select>
-          </div>
-          {/* <div style={{ color: 'red' }}>{errors.course}</div> */}
-
-          <div className="row">
-            <div className="form__input--buttons">
-              {/* <button className="btn--class">Reset</button> */}
-              <button className="btn--class">Sumbit</button>
+        <section className='form_section'>
+          <form className='form__content' onSubmit={(e) => formSubmit(e)}>
+            <div className="row">
+              <label>First name:</label>
+              <input type="text" name="firstName" value={firstName} onChange={handleChange} />
             </div>
-          </div>
-        </form>
-        
+            <div style={{ color: 'red' }}>{errors.firstName}</div>
+
+            <div className="row">
+              <label>Last name:</label>
+              <input type="text" name="lastName"
+                value={lastName}
+                onChange={handleChange} />
+            </div>
+            <div style={{ color: 'red' }}>{errors.lastName}</div>
+
+            <div className="row">
+              <label>Email:</label>
+              <input type="email" name="email"
+                value={email}
+                onChange={handleChange} />
+            </div>
+            <div style={{ color: 'red' }}>{errors.email}</div>
+
+            <div className="row">
+              <span>Gender:</span>
+              <span className="form__input--name">
+                <input
+                  type="radio"
+                  name="gender"
+                  value="male"
+                  checked={gender === "male"}
+                  onChange={handleChange}>
+                </input>
+                <label>Male</label> &nbsp;
+
+                <input type="radio" name="gender" value="female" checked={gender === "female"} onChange={handleChange} />
+                <label>Female</label>
+              </span>
+            </div>
+            {/* <div style={{ color: 'red' }}>{errors.gender}</div> */}
+
+            <div className="row">
+              <label>Courses:</label>
+              <select name="course" className="btn--class"
+                value={course}
+                onChange={(e) => setCourse(e.target.value)}>
+                <option value="reactjs">ReactJs</option>
+                <option value="nodejs">NodeJs</option>
+                <option value="mongodb">MongoDB</option>
+              </select>
+            </div>
+            {/* <div style={{ color: 'red' }}>{errors.course}</div> */}
+
+            <div className="row">
+              <div className="form__input--buttons">
+                {/* <button className="btn--class">Reset</button> */}
+                <button className="btn--class">Sumbit</button>
+              </div>
+            </div>
+          </form>
+        </section>
+
       </main>
     </>
   );
