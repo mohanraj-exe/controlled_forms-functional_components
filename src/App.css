@@ -1,38 +1,110 @@
-.App {
-  text-align: center;
+*, *::before, *::after{
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.3rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+header{
+  background-color: #136C72;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container {
+  width: 80%;
+  max-width: 1100px;
+  margin: 0 auto;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  /* border: 2px solid limegreen; */
+}
+
+.app_title {
+  margin: 0 auto;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #fff;
+  padding: 0.75em 0;
+}
+
+.main {
+  width: 80%;
+  margin-top: 1em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+table{
+  border-collapse: collapse;
+}
+
+thead {
+  background-color: #136C72;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+tr:nth-child(even){
+  background-color: #f2f2f2
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+tr,td{
+  border: ridge;
+} 
+
+.table{
+  /* width: 100%; */
+  /* max-width: 100%; */
+  align-self: flex-start;
+  /* max-width: 100%; */
+  /* margin-right: 0; */
+  /* padding: 0.15em; */
+
+}
+
+/* .table__contents{
+  display: flex;
+  flex-direction: row;
+} */
+
+.form{
+  width: 35%;
+  /* padding: 1em; */
+  /* border: 2px solid pink; */
+  border: ridge;
+  padding: 0.15em ;
+  /* max-width: 100%; */
+  /* display: flex; */
+  align-self: flex-start;
+}
+
+.row{
+  border: ridge;
+  padding: 0.15em ;
+  /* margin-bottom: 0.2em; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  /* flex-grow: 1; */
+}
+
+.form__input--name{
+  margin-right: 0.60em;
+}
+
+.form__input--buttons{
+  /* border: 1px solid #32cd32; */
+  margin: 0 auto;
+}
+
+.btn--class{
+  background-color: #136C72;
+  color: #fff;
+  padding: 0.75em 1.5em;
+  border-radius: 1.5em;
+  text-decoration: none;
+  border-style: none;
+  text-transform: uppercase;
 }
